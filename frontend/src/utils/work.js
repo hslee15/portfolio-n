@@ -54,4 +54,4 @@ export const works = [
   // 필요 개수만큼 추가
 ];
 
-export default Work;
+export default works;

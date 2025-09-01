@@ -53,7 +53,7 @@ const Aboutme = () => {
         <div className="in-wrap exper-wrap">
           <h4 className='list-lst'>list-tit</h4>
           <ul className="lst">
-            {skills.map((exp,i)=>(
+            {exper.map((exp,i)=>(
               <li key={i}>{exp}</li>
             ))}
           </ul>
@@ -61,7 +61,7 @@ const Aboutme = () => {
         <div className="in-wrap interests-wrap">
           <h4 className='list-lst'>list-tit</h4>
           <ul className="lst">
-            {skills.map((int,i)=>(
+            {interest.map((int,i)=>(
               <li key={i}>{int}</li>
             ))}
           </ul>

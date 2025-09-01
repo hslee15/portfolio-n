@@ -1,37 +1,33 @@
 import React from 'react'
+import works from '../../utils/work'
 import "./styles/Work.scss"
-import work from '../../utils/work'
-
 const Work = () => {
-  const id=work.id
-  const title=work.title
-  const subtitle=work.subtitle
-  const description=work.description
-
   return (
-        <section className="works">
-      <div className="inner">
-        <h2 className="sec-tit">WORKS.</h2>
-        <ul className="lst">
-          {items.map((it) => (
-            <li key={it.id}>
-              <a className="t-wrap" href={it.link || '#'} target="_blank" rel="noreferrer">
-                <h4 className="list-lst">{it.title}</h4>
-                <p className="txt">{it.subtitle}</p>
-                <div className="hash-wrap">
-                  {(it.tags || []).map((tg) => (
-                    <span className="hash" key={tg}>#{tg}</span>
-                  ))}
-                </div>
-              </a>
-              <a className="img-wrap" href={it.link || '#'} target="_blank" rel="noreferrer">
-                <img src={it.img} alt={it.title} />
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+    <div className='inner work-inner'>
+      <h3 className='sub-tit-2'>works.</h3>
+      <ul className="work-lst">
+        {works.map((work)=>(
+          <li key={work.id}>
+            <a href={work.links.notion} className='lst-t-wrap'>
+            <h4 className="lst-tit">
+              {work.title}
+            </h4>
+            <div className="tags">
+              {work.tags.map((t,i)=>(
+                <span key={i}>{t}</span>
+              ))}
+            </div>
+            </a>
+            <a href={work.links.demo} className="lst-img-wrap">
+              <div 
+              className="bg"
+              style={{backgroundImage:`url(${work.thumbnail})`}}
+              ></div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 
