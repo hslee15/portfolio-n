@@ -13,14 +13,18 @@
             align-items: center;
             display: flex;
             flex: 1;
+            transition: all .3s;
 
             .lst-t-wrap {
                 display: block;
                 padding: 3rem 1rem;
                 padding-left: 5rem;
+                flex: 1;
+
                 h4.lst-tit {
                     color: var(--neutral-100);
                 }
+
                 p.lst-dsc {
                     color: var(--neutral-400);
                 }
@@ -38,6 +42,35 @@
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
+                    transition: all .3s;
+                }
+            }
+
+
+            &:hover {
+                background-color: var(--primary);
+
+                .lst-t-wrap {
+                    h4.lst-tit {
+                        color: var(--neutral-900);
+                    }
+
+                    p.lst-dsc {
+                        color: var(--neutral-600);
+                    }
+
+                    .tags {
+                        span {
+                            background-color: var(--neutral-900);
+                            color: var(--neutral-100);
+                        }
+                    }
+                }
+
+                .lst-img-wrap {
+                    .bg {
+                        transform: scale(1.05);
+                    }
                 }
             }
         }
