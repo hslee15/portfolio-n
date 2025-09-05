@@ -6,10 +6,13 @@ import "./styles/Footer.scss"
 
 const Footer = () => {
   return (
-    <div className='inner foot-inner'>
+    <footer>
+    <div className='inner'>
       <div className="left">
-        <div className='logo'>LOGO</div>
-        <p>@ 2025 DECODE.Lab. All rights reserved.</p>
+        <h2>{footer.brand.name}</h2>
+        <p>
+          {footer.brand.copy}
+        </p>        
       </div>
       <div className="right">
         <a href="">
@@ -20,6 +23,7 @@ const Footer = () => {
         </a>
       </div>
     </div>
+    </footer>
   )
 }
 
