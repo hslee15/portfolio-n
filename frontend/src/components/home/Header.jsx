@@ -25,7 +25,7 @@ const Header = () => {
   useEffect(()=>{
     const onKey=(e)=> e.key=='Escape' && setMenuOpen(false)
 
-    document.addEventListener('keydown',onkey)
+    document.addEventListener('keydown',onKey)
     return()=>document.removeEventListener('keydown',onKey)
   },[])
 
