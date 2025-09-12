@@ -2,6 +2,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../lib/api"; // baseURL + withCredentials: true
+import AdminHeader from "../components/admin/AdminHeader";
+import AdminContact from "../components/admin/AdminContact"
+import './styles/AdminPost.scss';
 
 const AdminPost = () => {
   const nav = useNavigate();
@@ -20,10 +23,9 @@ const AdminPost = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleLogout}>
-        <button type="submit">로그아웃</button>
-      </form>
+    <div className="admin-container">
+      <AdminHeader/>
+      <AdminContact/>
     </div>
   );
 };

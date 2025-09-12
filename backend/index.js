@@ -9,7 +9,7 @@ const cookieParser =require("cookie-parser")
 
 app.use(cookieParser())
 app.use(express.json())
-app.use(express.urlencoded())
+app.use(express.urlencoded({ extended: true }))
 app.use(cors(
     {
         origin:process.env.FRONT_ORIGIN,
@@ -23,7 +23,9 @@ mongoose.connect(process.env.MONGO_URI).then(()=>{
 
 
 const userRoutes =require("./routes/user")
+const contactRoutes = require('./routes/contactRoutes')
 app.use("/api/auth",userRoutes)
+app.use("/api/contact",contactRoutes)
 
 
 app.listen(PORT,()=>{

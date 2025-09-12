@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { api } from "../lib/api"
+import api from "../lib/api"
 import { useNavigate } from "react-router-dom"
 import "./styles/AdminLogin.scss"
 
@@ -22,26 +22,30 @@ const AdminLogin = () => {
     })
   }
 
-  const handleSubmit=async(e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
     try {
-      const response =await api.post('/api/auth/login',
-        formData,{
-          withCredentials:true
-        }     
-      )
-      if(response.data.user){
-        nav("/admin/post")
+      console.log("보내는 formData:", formData)
+      const response = await api.post('/api/auth/login', formData, {
+        withCredentials: true,
+        headers: { 'Content-Type': 'application/json' },
+      })
+      console.log("로그인 응답:", response.data)
+
+      if (response.data.token) {
+        localStorage.setItem('token', response.data.token)
+      }
+
+      if (response.data.user?.isLoggedIn) {
+        nav('/admin/post')
       }
     } catch (error) {
-      const errorMsg = error.response.data.message ||'로그인 실패'
-
+      const errorMsg = error.response?.data?.message || '로그인 실패'
       setError({
-        message:errorMsg
+        message: errorMsg
       })
     }
-
   }
 
   return (
