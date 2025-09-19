@@ -88,7 +88,7 @@ router.delete('/:id', async (req, res) => {
             return res.status(404).json({message:'문의글을 찾을 수 없음'})
         }
         res.json({message:"문의글 성공적 삭제"})
-      
+    
     } catch (error) {
         console.log(error)
         res.status(500).json({ message: '서버에러' })
