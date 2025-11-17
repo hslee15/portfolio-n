@@ -2,10 +2,10 @@
 
 const aboutMe = {
   basic: {
-    name: "홍길동",
-    age: 29,
-    location: "서울, 대한민국",
-    mbti: "INTJ",
+    name: "이현석",
+    age: 25,
+    location: "경기도, 남양주시",
+    mbti: "ISTP",
   },
   skills: [
     "JavaScript (ES6+)",

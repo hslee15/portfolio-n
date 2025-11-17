@@ -9,8 +9,8 @@ const footer = {
         {
         icon: "link", // material-icons 기준
         label: "GitHub",
-        value: "github.com/username",
-        href: "https://github.com/username",
+        value: "github.com/hslee15",
+        href: "https://github.com/hslee15",
         },
         {
         icon: "link",
