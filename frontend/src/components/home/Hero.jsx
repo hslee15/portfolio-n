@@ -5,22 +5,20 @@ const Hero = () => {
     <div className='inner hero-inner'>
       <h1 className="tit">
         <span>
+          front
+        </span>
+        <span>
           developer
+          {/* back <span className="star-spin"><i className="star">✱</i></span> front */}
         </span>
         <span>
-
-          back <span className="star-spin"><i className="star">✱</i></span> front
-        </span>
-        <span>
-          portfolio
+          back
         </span>
       </h1>
       <p className="txt">
-        시맨틱 마크업을 통해 웹 접근성, <br />
-        웹 표준을 준수하여 차별이 없는 웹을 지향합니다. <br />
-        node express - react를 활용한 MERN 프로젝트를 지향하며, <br />
-        풀스택 전문가로써 성장과 도전을 지향합니다.
-    
+        프런트엔드와 백엔드을 모두 이해하며 <br/>
+        사용자 경험과 안정적인 서버 구조를 함께 고민하는<br/>
+        성장과 도전을 하는 개발자 <br/>
       </p>
       <div className="arrow">
         ⬇

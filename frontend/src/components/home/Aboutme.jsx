@@ -19,9 +19,9 @@ const Aboutme = () => {
           profile
         </h2>
         <p className="txt">
-          들어가는 최종 요소나 사용된다. <br />
-          레이아웃 들어가는 로렘 부르며,
-          <br /> 들어가는 최종 전에 프로젝트 사용할 사용된다. 
+          실용적이고 사용자에게 도움이 되는 서비스<br />
+          완성도 높은 웹 웹서비스,
+          <br /> 클라이언트와 서버 모두에서 안정적이고 자연스럽게
         </p>
       </div>
       <div className="about-container">
@@ -58,14 +58,14 @@ const Aboutme = () => {
             ))}
           </ul>
         </div>
-        {/* <div className="in-wrap interests-wrap">
-          <h4 className='list-lst'>list-tit</h4>
+        <div className="in-wrap interests-wrap">
+          <h4 className='list-lst'>interests</h4>
           <ul className="lst">
             {interest.map((int,i)=>(
               <li key={i}>{int}</li>
             ))}
           </ul>
-        </div> */}
+        </div>
       </div>
     </div>
   )
