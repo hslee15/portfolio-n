@@ -43,7 +43,7 @@ const Aboutme = () => {
           </ul>
         </div>
         <div className="in-wrap skills-wrap">
-          <h4 className='list-lst'>list-tit</h4>
+          <h4 className='list-lst'>skills</h4>
           <ul className="lst">
             {skills.map((skill,i)=>(
               <li key={i}>{skill}</li>
@@ -51,21 +51,21 @@ const Aboutme = () => {
           </ul>
         </div>
         <div className="in-wrap exper-wrap">
-          <h4 className='list-lst'>list-tit</h4>
+          <h4 className='list-lst'>experiences</h4>
           <ul className="lst">
             {exper.map((exp,i)=>(
               <li key={i}>{exp}</li>
             ))}
           </ul>
         </div>
-        <div className="in-wrap interests-wrap">
+        {/* <div className="in-wrap interests-wrap">
           <h4 className='list-lst'>list-tit</h4>
           <ul className="lst">
             {interest.map((int,i)=>(
               <li key={i}>{int}</li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   )
